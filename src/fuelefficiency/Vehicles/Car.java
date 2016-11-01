@@ -1,15 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package fuelefficiency.Vehicles;
 
-/**
- *
- * @author jomar9255
- */
-public class Car {
+public class Car extends Vehicle{
+    
+    public Car(){
+    super();
+    }
+    
+    public Car(double l){
+    super(l);
+            
+    }
+    
+    @Override
+    public double getDistance(){
+       double eff = liters/(9.4/100);
+       return eff;
+    }
     
 }

@@ -10,23 +10,21 @@ package fuelefficiency.Vehicles;
  *
  * @author jomar9255
  */
-
-/**
- * 
- * @author jomar9255
- */
-public abstract class Vehicle {
-
-    protected double liters;
-   
-    public Vehicle(){
-    liters = (Math.random() * 10) + 9;
+public class Motorcycle extends Vehicle{
+    
+    public Motorcycle(){
+    super();
     }
     
-    public Vehicle(double l){
-        liters = l;
+    public Motorcycle(double l){
+    super(l);
+            
     }
     
-    abstract public double getDistance();
+    @Override
+    public double getDistance(){
+       double eff = liters/(6.3/100);
+       return eff;
+    }
     
 }

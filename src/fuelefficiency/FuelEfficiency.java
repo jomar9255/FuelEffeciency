@@ -5,6 +5,9 @@
  */
 
 package fuelefficiency;
+import fuelefficiency.Vehicles.Car;
+import fuelefficiency.Vehicles.HybridCar;
+import fuelefficiency.Vehicles.Motorcycle;
 import fuelefficiency.Vehicles.Truck;
 import fuelefficiency.Vehicles.Vehicle;
 /**
@@ -18,9 +21,16 @@ public class FuelEfficiency {
      */
     public static void main(String[] args) {
         Vehicle[] v = new Vehicle[4];
-        Truck t = new Truck(50);
-        System.out.println(t.getDistance());
-        
+        v[0] = new Car(50);
+        v[1] = new Truck(50);
+        v[2] = new Motorcycle(50);
+        v[3] = new HybridCar(50);
+  
+        int j = -1;    
+        for(Vehicle i : v){
+            j++;
+            System.out.println(v[j].getDistance());   
+        }
     }
     
 }

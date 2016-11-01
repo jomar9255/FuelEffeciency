@@ -26,4 +26,5 @@ public class Truck extends Vehicle{
        double eff = liters/(14.1/100);
        return eff;
     }
+    
 }
